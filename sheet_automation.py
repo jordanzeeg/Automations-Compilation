@@ -15,15 +15,34 @@ res = worksheet.get_all_values()
 row1 = worksheet.row_values(1)
 #remove first row
 i = 0
+#loop through each row (not the first) and write them to the other spreadsheet
+#need to add fields to them (dates, finished?, owner, ...)
 for row in res:
     if(i!=0):
          print(row)
+         for opt in row:
+             print(opt)
+         #create list in order(based on social marketing thing)    
     i = i + 1     
     
-   
 
-print(res)
-print(row1)
+    
+"""submit list order
+0 - project name
+1 - task name
+2 - assigned by
+3 - date assigned
+4 - due date
+5 - date started
+6 - completed date
+7 - priority
+8 - owner
+9 - status
+10 - notes
+11+ nothing else matters
+
+
+ """
 
 
 print("--- %s seconds ---" % (time.time() - start_time)) #put this in the main program at the end
