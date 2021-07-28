@@ -17,12 +17,16 @@ row1 = worksheet.row_values(1)
 i = 0
 #loop through each row (not the first) and write them to the other spreadsheet
 #need to add fields to them (dates, finished?, owner, ...)
+
+today = date.today()
 for row in res:
     if(i!=0):
          print(row)
          for opt in row:
              print(opt)
-         #create list in order(based on social marketing thing)    
+         #create list in order(based on social marketing thing)   
+         resultRow = ["Quick Updates",row[0],"Email",]
+
     i = i + 1     
     
 
